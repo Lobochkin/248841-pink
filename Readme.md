@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Владимир Лобочкин](https://up.htmlacademy.ru/adaptive/14/user/248841).
-* Наставник: `Неизвестно`.
+* Наставник: `Вадим Новаш`.
 
 ---
 
