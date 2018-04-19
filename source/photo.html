@@ -6,29 +6,28 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo logo">
+      <div class="page-header__logo">
         PINK
       </div>
-      <button class="page-header__close-menu" type="button"></button>
-      <button class="page-header__open-menu" type="button"></button>
       <nav class="main-nav">
+        <button class="main-nav__toggler" type="button"></button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">ГЛАВНАЯ</a>
+          <li class="site-list__item site-list__item--active">
+            <a href="index.html">главная</a>
           </li>
-          <li class="site-list__item  nav__link--active">
-            <a >
-              ФОТОГРАФИИ
+          <li class="site-list__item">
+            <a>
+              фотографии
             </a>
           </li>
           <li class="site-list__item">
             <a href="form.html">
-              КОНКУРС
+              конкурс
             </a>
           </li>
           <li class="site-list__item">
             <a href="#">
-              HTML ACADEMY
+              html academy
             </a>
           </li>
         </ul>
@@ -36,97 +35,97 @@
     </header>
     <main class="page-main-photo">
       <h1 class="visually-hidden">Фотографии пользователей</h1>
-      <section class="page-desc">
-        <div class="page-desc__img">Фотографии пользователей</div>
-        <p class="page-desc__text">
+      <section class="page-description">
+        <div class="page-description__img">Фотографии пользователей</div>
+        <p class="page-description__text">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </p>
       </section>
       <section class="photo-users">
-        <figure class="photo-users__img photo-day">
+        <section class="photo-users__img photo-day">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Анна <span class="photo-users__time">(5 МИНУТ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Анна <span class="photo-users__time">(5 минут назад)</span></h2>
             <p class="photo-users__text">
               Прыгать или нет? Напишите в коментарии свой ответ и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">215</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">215</span>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="photo-users__img">
+          </div>
+        </section>
+        <section class="photo-users__img">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Левон<span class="photo-users__time">(5 ЧАСОВ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Левон<span class="photo-users__time">(5 часов назад)</span></h2>
             <p class="photo-users__text">
               Вчера он на луну летал, сегодня в руки к нам попал.
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">356</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">356</span>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="photo-users__img">
+          </div>
+        </section>
+        <section class="photo-users__img">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Антон<span class="photo-users__time">(12 ЧАСОВ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Антон<span class="photo-users__time">(12 часов назад)</span></h2>
             <p class="photo-users__text">
               Соседи будут рады!
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">666</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">666</span>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="photo-users__img">
+          </div>
+        </section>
+        <section class="photo-users__img">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Борис<span class="photo-users__time">(20 ЧАСОВ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Борис<span class="photo-users__time">(20 часов назад)</span></h2>
             <p class="photo-users__text">
               Здесь могла быть ваша цитата о высоком и вечном.
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">215</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">215</span>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="photo-users__img">
+          </div>
+        </section>
+        <section class="photo-users__img">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Сергей<span class="photo-users__time">(25 ЧАСОВ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Сергей<span class="photo-users__time">(25 часов назад)</span></h2>
             <p class="photo-users__text">
               Самая кубанская в мире!
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">4</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">4</span>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="photo-users__img">
+          </div>
+        </section>
+        <section class="photo-users__img">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Максим<span class="photo-users__time">(40 ЧАСОВ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Максим<span class="photo-users__time">(40 часов назад)</span></h2>
             <p class="photo-users__text">
               Где снег-то?
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">150</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">150</span>
             </div>
-          </figcaption>
-        </figure>
-        <figure class="photo-users__img">
+          </div>
+        </section>
+        <section class="photo-users__img">
           <img src="http://placehold.it/150x100" alt="Фотография пользователя">
-          <figcaption>
-            <h2 class="photo-users__title">Надежда<span class="photo-users__time">(45 ЧАСОВ НАЗАД)</span></h2>
+          <div class="photo-users__wrapper">
+            <h2 class="photo-users__title">Надежда<span class="photo-users__time">(45 часов назад)</span></h2>
             <p class="photo-users__text">
               Всем GM и взаимные лайки!
             </p>
             <div class="photo-users__like like">
-              <span class="like__icon"></span>НРАВИТЬСЯ:<span class="like__number">2560</span>
+              <span class="like__icon"></span>нравиться:<span class="like__number">2560</span>
             </div>
-          </figcaption>
-        </figure>
+          </div>
+        </section>
       </section>
     </main>
     <footer class="page-footer">
@@ -150,7 +149,7 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Академии</a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Академии</a>
         </div>
       </div>
     </footer>
