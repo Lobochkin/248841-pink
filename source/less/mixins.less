@@ -1,0 +1,17 @@
+.icon(@url, @size-width: 50px, @size-height: 60px) {
+  min-width: @size-width;
+  min-height: @size-height;
+  background-image: url("../img/@{url}.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.fonts (@font-size, @line-height, @color, @text-transform, @font-weight) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+  text-transform: @text-transform;
+  font-weight: @font-weight;
+}
