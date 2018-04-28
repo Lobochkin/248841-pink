@@ -1,0 +1,31 @@
+.icon(@url, @size-width: 50px, @size-height: 60px) {
+  min-width: @size-width;
+  min-height: @size-height;
+  background-image: url("../img/@{url}.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.fonts (@font-size, @line-height, @color, @text-transform, @font-weight) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: @font-size;
+  line-height: @line-height;
+  color: @color;
+  text-transform: @text-transform;
+  font-weight: @font-weight;
+}
+
+.photo-black-white () {
+  width: 320px;
+  height: 170px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: right -60px;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 84px;
+  text-align: center;
+  box-sizing: border-box;
+  .fonts (24px, 27px, #ffffff, none, lighter);
+}

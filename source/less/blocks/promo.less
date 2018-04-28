@@ -1,0 +1,65 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+.promo__wrapper {
+  position: relative;
+  background-color: #ffffff;
+  padding-top: 44px;
+  margin-bottom: 28px;
+}
+
+.promo__question {
+  .fonts (24px, 27px, #000000, none, lighter);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+
+.promo__text {
+  .fonts (24px, 27px, #000000, none, lighter);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 47px;
+}
+
+.promo__wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  .icon(bg-triangle-white, 100%, 28px);
+  fill: #ffffff;
+}
+
+.promo__caption {
+  margin-top: 38px;
+  margin-bottom: 18px;
+  padding-left: 48px;
+  padding-right: 48px;
+  .fonts (18px, 21px, #000000, none, bold);
+  text-align: center;
+}
+
+.promo__description {
+  margin: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+  .fonts (14px, 22px, #000000, none, normal);
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 48px;
+  }
+}
+
+.promo__img {
+  width: 157px;
+  height: 280px;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-size: 157px 320px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
