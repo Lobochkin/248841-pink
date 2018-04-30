@@ -46,3 +46,37 @@
   padding-right: 44px;
   padding-bottom: 36px;
 }
+
+@media (min-width: 1200px) {
+  .load::before {
+    bottom: 0;
+    right: 170px;
+    width: 560px;
+    height: 645px;
+    background-size: 560px 645px;
+  }
+
+  .load {
+    position: static;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-size: 100% auto;
+    background-position-y: -110px;
+    z-index: 0;
+  }
+
+    //&::after {
+    //  content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  width: 100%;
+    //  min-height: 850px;
+    //  background-image: url("../img/bg-back-mobile@1x.jpg");
+    //  background-size: 1200px auto;
+    //  background-repeat: no-repeat;
+    //}
+
+  .load__image {
+    display: none;
+  }
+}

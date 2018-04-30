@@ -20,3 +20,21 @@
 .site-list__item:first-of-type {
   box-shadow: 0 -1px 0 0 #000000;
 }
+
+@media (min-width: 1200px) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-list__item {
+    border: none;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 50px;
+  }
+
+  .site-list__item:first-of-type {
+    box-shadow: none;
+  }
+}

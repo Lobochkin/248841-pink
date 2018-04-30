@@ -2,11 +2,63 @@
   position: relative;
   padding-top: 70px;
   background-color: #283645;
-  outline: 2px solid;
 }
 
 .page-header__logo {
   position: absolute;
   top: 22px;
   left: 20px;
+}
+
+.page-header__logo svg:nth-of-type(2) {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .page-header {
+    padding-top: 110px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 27px;
+    left: 20px;
+  }
+
+  .page-header__logo svg:first-of-type {
+    display: none;
+  }
+
+  .page-header__logo svg:nth-of-type(2) {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 450px;
+    padding-right: 130px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+
+    //&::before {
+    //  content: "";
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  width: 100%;
+    //  min-height: 850px;
+    //  background-image: url("../img/bg-back-mobile@1x.jpg");
+    //  background-size: 1200px auto;
+    //  background-repeat: no-repeat;
+    //}
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 27px;
+    left: 130px;
+  }
 }
