@@ -1,12 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  width: 320px;
-  margin: auto;
-  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
+}
+
+.page-container {
+  margin: auto;
+  width: 320px;
 }
 
 a {
@@ -30,15 +42,13 @@ img {
 }
 
 @media (min-width: 660px) {
-  body {
+  .page-container {
     width: 660px;
-    margin: auto;
   }
 }
 
 @media (min-width: 1200px) {
-  body {
+  .page-container {
     width: 1200px;
-    margin: auto;
   }
 }

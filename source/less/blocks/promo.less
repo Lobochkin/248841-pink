@@ -1,14 +1,24 @@
 .promo {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 
-.promo__wrapper {
+.promo .container {
+  width: 320px;
+}
+
+.promo__header {
   position: relative;
-  background-color: #ffffff;
   padding-top: 44px;
   margin-bottom: 28px;
+  .container (320px, 20px);
+}
+
+.promo-inner {
+  background-color: #f2f2f2;
+  padding-top: 1px;
+  .container (320px, 20px);
 }
 
 .promo__question {
@@ -25,10 +35,11 @@
   margin-bottom: 47px;
 }
 
-.promo__wrapper::after {
+.promo__header::after {
   content: "";
   position: absolute;
-  bottom: -28px;
+  left: -20px;
+  bottom: -75px;
   .icon(bg-triangle-white, 100%, 28px);
   fill: #ffffff;
 }
@@ -48,18 +59,70 @@
   padding-right: 30px;
   .fonts (14px, 22px, #000000, none, normal);
   text-align: center;
+}
 
-  &:last-of-type {
-    margin-bottom: 48px;
+.promo__description:last-of-type {
+  margin-bottom: 48px;
+}
+
+.promo__imgs {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (min-width: 660px) {
+  .promo .container {
+    width: 660px;
+  }
+
+  .promo__header {
+    .container (660px, 20px);
+  }
+
+  .promo-inner {
+    display: flex;
+    justify-content: space-between;
+    .container (660px, 20px);
+  }
+
+  .promo__advantages {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: 50%;
+  }
+
+  .promo__description:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .promo__imgs {
+    width: 50%;
   }
 }
 
-.promo__img {
-  width: 157px;
-  height: 280px;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-size: 157px 320px;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 1200px) {
+  .promo .container {
+    width: 1200px;
+  }
+
+  .promo__header {
+    .container (1200px, 120px);
+  }
+
+  .promo-inner {
+    .container (1200px, 120px);
+    flex-direction: column;
+  }
+
+  .promo__advantages {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .promo__imgs {
+    width: 100%;
+  }
 }

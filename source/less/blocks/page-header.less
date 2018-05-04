@@ -19,6 +19,10 @@
     padding-top: 110px;
   }
 
+  .page-header .container {
+    .container (660px, 0px);
+  }
+
   .page-header__logo {
     position: absolute;
     top: 27px;
@@ -36,29 +40,20 @@
 
 @media (min-width: 1200px) {
   .page-header {
-    position: relative;
-    padding-top: 40px;
-    padding-left: 450px;
-    padding-right: 130px;
+    padding-top: 27px;
     background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1;
+  }
 
-    //&::before {
-    //  content: "";
-    //  position: absolute;
-    //  top: 0;
-    //  left: 0;
-    //  width: 100%;
-    //  min-height: 850px;
-    //  background-image: url("../img/bg-back-mobile@1x.jpg");
-    //  background-size: 1200px auto;
-    //  background-repeat: no-repeat;
-    //}
+  .header-iner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-header .container {
+    .container (1200px, 130px);
   }
 
   .page-header__logo {
-    position: absolute;
-    top: 27px;
-    left: 130px;
+    position: static;
   }
 }

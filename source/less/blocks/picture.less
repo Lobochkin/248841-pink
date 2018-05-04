@@ -1,0 +1,53 @@
+.picture__phone {
+  width: 157px;
+  height: 280px;
+  background-size: 157px 320px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.picture__phone--smile {
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+}
+
+.picture__phone--black,
+.picture__phone--pink {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .picture__phone {
+    height: 485px;
+    width: 268px;
+    margin-left: 0;
+  }
+
+  .picture__phone--smile {
+    background-size: 270px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .picture__phone--black,
+  .picture__phone--pink {
+    display: block;
+  }
+
+  .picture__phone--black {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+  }
+
+  .picture__phone--pink {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+  }
+
+  .picture {
+    justify-content: space-around;
+  }
+
+  .picture__phone {
+    width: 180px;
+    height: 285px;
+    background-size: 180px auto;
+  }
+}
