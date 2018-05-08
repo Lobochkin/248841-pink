@@ -42,10 +42,10 @@
 .promo-inner::before {
   content: "";
   position: absolute;
-  width: 100%;
   left: 0;
-  top: 0;
+  top: -1px;
   .icon(bg-triangle-white, 100%, 28px);
+  background-size: 100% 100%;
   fill: #ffffff;
 }
 
@@ -90,6 +90,10 @@
     justify-content: space-between;
   }
 
+  .promo-inner::before {
+    height: 50px;
+  }
+
   .promo__advantages {
     display: flex;
     flex-direction: column;
@@ -118,6 +122,10 @@
   .promo-inner .container {
     padding: 0 120px;
     flex-direction: column;
+  }
+
+  .promo-inner::before {
+    height: 95px;
   }
 
   .promo__advantages {
