@@ -1,24 +1,29 @@
 .promo {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
 }
 
-.promo .container {
-  width: 320px;
-}
+//.promo .container {
+//  width: 320px;
+//}
 
 .promo__header {
   position: relative;
   padding-top: 44px;
   margin-bottom: 28px;
   .container (320px, 20px);
+  background-color: #ffffff;
 }
 
 .promo-inner {
+  position: relative;
   background-color: #f2f2f2;
   padding-top: 1px;
-  .container (320px, 20px);
+  min-width: 320px;
+}
+
+.promo-inner .container {
+  padding: 0 20px;
 }
 
 .promo__question {
@@ -32,14 +37,14 @@
   .fonts (24px, 27px, #000000, none, lighter);
   text-align: center;
   margin-top: 0;
-  margin-bottom: 47px;
 }
 
-.promo__header::after {
+.promo-inner::before {
   content: "";
   position: absolute;
-  left: -20px;
-  bottom: -75px;
+  width: 100%;
+  left: 0;
+  top: 0;
   .icon(bg-triangle-white, 100%, 28px);
   fill: #ffffff;
 }
@@ -73,17 +78,16 @@
 
 @media (min-width: 660px) {
   .promo .container {
-    width: 660px;
+    padding: 0 20px;
   }
 
   .promo__header {
     .container (660px, 20px);
   }
 
-  .promo-inner {
+  .promo-inner .container {
     display: flex;
     justify-content: space-between;
-    .container (660px, 20px);
   }
 
   .promo__advantages {
@@ -103,16 +107,16 @@
 }
 
 @media (min-width: 1200px) {
-  .promo .container {
-    width: 1200px;
-  }
-
   .promo__header {
-    .container (1200px, 120px);
+    padding-bottom: 47px;
   }
 
-  .promo-inner {
-    .container (1200px, 120px);
+  .promo__header .container {
+    width: 100%;
+  }
+
+  .promo-inner .container {
+    padding: 0 120px;
     flex-direction: column;
   }
 
