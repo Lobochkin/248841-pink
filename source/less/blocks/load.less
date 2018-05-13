@@ -1,13 +1,15 @@
 .load {
-  position: relative;
   background-color: #1d2631;
   margin-top: -66px;
   min-height: 734px;
   min-width: 320px;
-  z-index: -1;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.load__inner {
+  position: relative;
 
   &::before {
     content: "";
@@ -24,7 +26,6 @@
 .load .container {
   min-height: 460px;
   padding-top: 490px;
-  .container (100%, 20px);
 }
 
 .load__slogan {
@@ -36,6 +37,7 @@
   width: 280px;
   border-radius: 28px;
   border: 3px solid #ffffff;
+  margin: 0 auto;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 18px;
@@ -60,11 +62,18 @@
 @media (min-width: 660px) {
   .load {
     margin-top: -110px;
+  }
+
+  .load .container {
+    padding-top: 180px;
+  }
+
+  .load__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     &::before {
-      content: "";
-      position: absolute;
-      display: block;
       top: 190px;
       right: 20px;
       width: 470px;
@@ -73,28 +82,21 @@
     }
   }
 
-  .load .container {
-    width: 660px;
-    padding-top: 180px;
-  }
-
-  .load-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .load__slogan {
     display: inline-block;
     width: 300px;
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  .load__button {
+    margin: 0;
+  }
 }
 
 
 @media (min-width: 1200px) {
-  .load::before {
+  .load__inner::before {
     bottom: 0;
     right: 170px;
     width: 560px;
@@ -106,9 +108,5 @@
     min-height: 834px;
     background-size: 100% auto;
     background-position-y: -110px;
-  }
-
-  .load .container {
-    .container (1200px, 120px);
   }
 }
