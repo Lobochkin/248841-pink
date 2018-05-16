@@ -1,32 +1,18 @@
 .load {
-  background-color: #1d2631;
-  margin-top: -66px;
+  margin-top: 100px;
   min-height: 734px;
-  min-width: 320px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
-.load__inner {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 176px;
-    width: 258px;
-    height: 286px;
-    background-image: url("../img/iphone-hand-mobile@1x.png");
-    background-size: 258px 286px;
-  }
+.load::before {
+  content: "";
+  display: block;
+  top: 176px;
+  width: 258px;
+  height: 286px;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-size: 258px 286px;
 }
 
-.load .container {
-  min-height: 460px;
-  padding-top: 490px;
-}
 
 .load__slogan {
   display: none;
@@ -60,26 +46,12 @@
 }
 
 @media (min-width: 660px) {
-  .load {
-    margin-top: -110px;
-  }
-
-  .load .container {
-    padding-top: 180px;
-  }
-
-  .load__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    &::before {
-      top: 190px;
-      right: 20px;
-      width: 470px;
-      height: 544px;
-      background-size: 470px 544px;
-    }
+  .load::before {
+    top: 190px;
+    right: 20px;
+    width: 470px;
+    height: 544px;
+    background-size: 470px 544px;
   }
 
   .load__slogan {
@@ -95,18 +67,16 @@
 }
 
 
-@media (min-width: 1200px) {
-  .load__inner::before {
-    bottom: 0;
-    right: 170px;
-    width: 560px;
-    height: 645px;
-    background-size: 560px 645px;
-  }
-
+@media (min-width: 960px) {
   .load {
-    min-height: 834px;
-    background-size: 100% auto;
-    background-position-y: -110px;
+    background-color: transparent;
+
+    &::before {
+      bottom: 0;
+      right: 170px;
+      width: 560px;
+      height: 645px;
+      background-size: 560px 645px;
+    }
   }
 }
