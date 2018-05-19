@@ -1,14 +1,32 @@
 .promo {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
 }
 
-.promo__wrapper {
+//.promo .container {
+//  width: 320px;
+//}
+
+.promo__header {
   position: relative;
-  background-color: #ffffff;
   padding-top: 44px;
   margin-bottom: 28px;
+  .container (320px, 20px);
+  background-color: #ffffff;
+}
+
+.promo-inner {
+  position: relative;
+  background-color: #f2f2f2;
+  padding-top: 1px;
+  padding-bottom: 280px;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.promo-inner .container {
+  padding: 0 20px;
 }
 
 .promo__question {
@@ -22,14 +40,15 @@
   .fonts (24px, 27px, #000000, none, lighter);
   text-align: center;
   margin-top: 0;
-  margin-bottom: 47px;
 }
 
-.promo__wrapper::after {
+.promo-inner::before {
   content: "";
   position: absolute;
-  bottom: -28px;
+  left: 0;
+  top: -1px;
   .icon(bg-triangle-white, 100%, 28px);
+  background-size: 100% 100%;
   fill: #ffffff;
 }
 
@@ -48,18 +67,77 @@
   padding-right: 30px;
   .fonts (14px, 22px, #000000, none, normal);
   text-align: center;
+}
 
-  &:last-of-type {
-    margin-bottom: 48px;
+.promo__description:last-of-type {
+  margin-bottom: 48px;
+}
+
+.promo__imgs {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (min-width: 660px) {
+  .promo .container {
+    padding: 0 20px;
+  }
+
+  .promo__header {
+    .container (660px, 20px);
+  }
+
+  .promo-inner .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .promo-inner::before {
+    height: 50px;
+  }
+
+  .promo__advantages {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: 50%;
+  }
+
+  .promo__description:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .promo__imgs {
+    width: 50%;
   }
 }
 
-.promo__img {
-  width: 157px;
-  height: 280px;
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-size: 157px 320px;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 960px) {
+  .promo__header {
+    padding-bottom: 47px;
+  }
+
+  .promo__header .container {
+    width: 100%;
+  }
+
+  .promo-inner .container {
+    padding: 0 120px;
+    flex-direction: column;
+  }
+
+  .promo-inner::before {
+    height: 95px;
+  }
+
+  .promo__advantages {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .promo__imgs {
+    width: 100%;
+  }
 }
