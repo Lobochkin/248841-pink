@@ -11,7 +11,7 @@
   background-repeat: no-repeat;
 }
 
-.page-header__logo {
+.page-header__logo-btn {
   background-color: #283645;
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,7 @@
   }
 }
 
-.page-header__logo svg {
+.page-header__logo-btn svg {
   display: block;
 
   &:nth-of-type(2) {
@@ -42,7 +42,7 @@
 }
 
 @media (min-width: 660px) {
-  .page-header__logo {
+  .page-header__logo-btn {
     padding: 27px 20px 40px;
 
     & a {
@@ -51,11 +51,11 @@
     }
   }
 
-  .page-header__logo svg:first-of-type {
+  .page-header__logo-btn svg:first-of-type {
     display: none;
   }
 
-  .page-header__logo svg:nth-of-type(2) {
+  .page-header__logo-btn svg:nth-of-type(2) {
     display: block;
   }
 }
@@ -75,15 +75,15 @@
     flex-wrap: wrap;
   }
 
-  .page-header__logo {
+  .page-header__logo-btn {
     background-color: transparent;
   }
 
-  .page-header__logo:hover path {
+  .page-header__logo-btn:hover path {
     fill: @red;
   }
 
-  .page-header__logo:active path {
+  .page-header__logo-btn:active path {
     fill: @white;
     opacity: 0.3;
   }
