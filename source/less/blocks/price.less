@@ -1,0 +1,15 @@
+.price {
+  position: relative;
+  background-color: #f2f2f2;
+  padding-top: 90px;
+  padding-bottom: 50px;
+}
+
+.price::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  .icon(bg-triangle-white, 100%, 28px);
+  background-size: 100% 100%;
+}

@@ -1,18 +1,20 @@
 .load {
-  margin-top: 100px;
-  min-height: 734px;
+  margin-top: 110px;
 }
 
 .load::before {
   content: "";
   display: block;
-  top: 176px;
   width: 258px;
   height: 286px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-size: 258px 286px;
 }
 
+.load__inner {
+  background-color: #1d2631;
+  padding: 20px 20px 30px;
+}
 
 .load__slogan {
   display: none;
@@ -20,29 +22,31 @@
 
 .load__button {
   display: block;
-  width: 280px;
+  min-height: 55px;
   border-radius: 28px;
-  border: 3px solid #ffffff;
-  margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  border: 3px solid @white;
+  margin-bottom: 30px;
+  padding-top: 12px;
   font-size: 18px;
-  line-height: 20px;
-  font-weight: bold;
-  color: #ffffff;
+  line-height: 18px;
+  font-weight: 700;
+  color: @white;
   text-transform: none;
   text-align: center;
 }
 
+.load__list {
+  margin-bottom: 25px;
+}
+
 .load__description {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 24px;
   text-transform: none;
-  font-weight: lighter;
+  font-weight: 300;
   margin: 0;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 36px;
 }
 
 @media (min-width: 660px) {

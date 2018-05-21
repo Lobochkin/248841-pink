@@ -1,4 +1,4 @@
-.page-header {
+.page-header:not(.page-header--img) {
   background-color: #1d2631;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: 100%;
@@ -6,35 +6,59 @@
 }
 
 .page-header--img {
+  background-color: #1d2631;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .page-header__logo-btn {
-  background-color: #283645;
+  background-color: @dark;
   display: flex;
   justify-content: space-between;
   padding: 20px 20px 26px;
-
-  & a {
-    display: block;
-    width: 75px;
-    height: 24px;
-  }
 }
 
 .page-header__logo-btn svg {
   display: block;
+}
 
-  &:nth-of-type(2) {
+.page-header__link {
+  display: block;
+  width: 75px;
+  height: 24px;
+}
+
+.page-header__link svg:nth-of-type(2) {
+  display: none;
+}
+
+.page-header__toggler {
+  padding: 0;
+  width: 50px;
+  height: 27px;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+
+  & svg:first-of-type {
+    display: block;
+  }
+
+  & svg:nth-of-type(2) {
     display: none;
   }
 }
 
-.page-header__toggler {
-  width: 23px;
-  height: 23px;
+.page-header__toggler.page-header__toggler--open svg {
+  &:first-of-type {
+    display: none;
+  }
+
+  &:nth-of-type(2) {
+    display: block;
+  }
 }
 
 .page-header .container {
@@ -44,19 +68,21 @@
 @media (min-width: 660px) {
   .page-header__logo-btn {
     padding: 27px 20px 40px;
+  }
 
-    & a {
-      width: 150px;
-      height: 40px;
+  .page-header__link {
+    width: 150px;
+    height: 40px;
+  }
+
+  .page-header__link svg {
+    &:first-of-type {
+      display: none;
     }
-  }
 
-  .page-header__logo-btn svg:first-of-type {
-    display: none;
-  }
-
-  .page-header__logo-btn svg:nth-of-type(2) {
-    display: block;
+    &:nth-of-type(2) {
+      display: block;
+    }
   }
 }
 
