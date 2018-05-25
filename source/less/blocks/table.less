@@ -1,5 +1,4 @@
 .table {
-  min-width: 620px;
   border-spacing: 2px;
   border-color: #e5e5e5;
   margin-left: -565px;
@@ -16,7 +15,7 @@
 }
 
 .table th:not(:first-of-type) {
-  min-height: 100px;
+  height: 100px;
   min-width: 280px;
   background-color: @dark;
   .fonts (18px, 30px, @white, uppercase, 700);
@@ -47,4 +46,43 @@
   width: 28px;
   height: 28px;
   .icon(icon-menu-cross, 28px, 28px);
+}
+
+@media (min-width: 660px) {
+  .table {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .table td {
+    padding-left: 16px;
+    padding-right: 5px;
+    text-align: left;
+    text-transform: none;
+    min-width: 0;
+    width: 25%;
+    height: 45px;
+  }
+
+  .table th:not(:first-of-type) {
+    height: 80px;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .table__price {
+    font-size: 16px;
+  }
+
+  .table__inner {
+    justify-content: center;
+  }
+
+  .price__control {
+    display: none;
+  }
+
+  .table__text {
+    display: none;
+  }
 }

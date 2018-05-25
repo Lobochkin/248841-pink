@@ -11,7 +11,7 @@
   .fonts (24px, 30px, @dark, none, 300);
 }
 
-.feedback__contact {
+.feedback__contact:not(:last-of-type) {
   margin-bottom: 20px;
 }
 
@@ -40,4 +40,58 @@
   bottom: -33px;
   .icon(bg-triangle-white-footer, 100%, 34px);
   background-size: 100% 100%;
+}
+
+@media (min-width: 660px) {
+  .feedback {
+    padding-bottom: 30px;
+  }
+
+  .feedback-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feedback__slogan {
+    margin: 0 0 50px;
+    width: 100%;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .feedback__contact:not(:last-of-type) {
+    margin-bottom: 50px;
+  }
+
+  .feedback__contact {
+    width: 50%;
+  }
+
+  .feedback::after {
+    bottom: -68px;
+    min-height: 70px;
+  }
+}
+
+@media (min-width: 960px) {
+  .feedback__contact {
+    margin-bottom: 0;
+    width: 33.333%;
+  }
+
+  .feedback__contact:nth-of-type(2) {
+    order: 1;
+  }
+
+  .feedback__slogan {
+    margin: 0 0 70px;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .feedback::after {
+    bottom: -105px;
+    min-height: 105px;
+  }
 }

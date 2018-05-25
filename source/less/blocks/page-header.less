@@ -1,12 +1,11 @@
-.page-header:not(.page-header--img) {
+.page-header {
   background-color: #1d2631;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
-.page-header--img {
-  background-color: #1d2631;
+.page-header.page-header--img {
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,17 +60,26 @@
   }
 }
 
-.page-header .container {
+.page-header__inner {
   .container (100%, 0);
 }
 
+.page-header__inner .container {
+  padding: 0;
+}
+
 @media (min-width: 660px) {
+  .page-header__inner .container {
+    padding-left: 3.03%;
+    padding-right: 3.03%;
+  }
+
   .page-header__logo-btn {
     padding: 27px 20px 40px;
   }
 
   .page-header__link {
-    width: 150px;
+    width: 147px;
     height: 40px;
   }
 
@@ -89,10 +97,16 @@
 @media (min-width: 960px) {
   .page-header {
     background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100% 110px;
+  }
+
+  .page-header__logo-btn {
+    padding: 27px 0;
   }
 
   .page-header .container {
     width: 960px;
+    padding: 0 1.06%;
   }
 
   .page-header__inner {
@@ -101,8 +115,8 @@
     flex-wrap: wrap;
   }
 
-  .page-header__logo-btn {
-    background-color: transparent;
+  .page-header__inner .container {
+    padding: 0;
   }
 
   .page-header__logo-btn:hover path {
