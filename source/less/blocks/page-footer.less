@@ -2,6 +2,11 @@
   display: none;
 }
 
+.page-footer__inner {
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
 .page-footer__logo {
   display: block;
   width: 150px;
@@ -10,7 +15,11 @@
   margin: 0 auto 40px;
 }
 
-@media (min-width: 660px) {
+.page-footer__social {
+  margin: 0 0 40px;
+}
+
+@media (min-width: @tablet-width) {
   .page-footer--main {
     display: block;
   }
@@ -23,5 +32,17 @@
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright__text {
+    font-size: 18px;
+  }
+
+  .page-footer__inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }

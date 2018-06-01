@@ -1,0 +1,142 @@
+.filter__list-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0 17.18%;
+  padding-top: 26px;
+}
+
+.filter__item-btn {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.filter__item-btn:nth-of-type(1) svg path:nth-of-type(1),
+.filter__item-btn:nth-of-type(2) svg path:nth-of-type(1) {
+  fill: none;
+}
+
+.filter__btn {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  width: 45px;
+  height: 45px;
+
+  &:hover path,
+  &:hover rect {
+    fill: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.filter__btn--active path,
+.filter__btn--active rect {
+  fill: @red;
+}
+
+.filter__list-scale {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 34px;
+  border-bottom: 2px solid #dddfe0;
+}
+
+.filter__item-scale {
+  display: none;
+}
+
+.filter__item-scale--mobile {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .filter ul {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .filter li {
+    border-bottom: 2px solid #dddfe0;
+    margin-bottom: 36px;
+  }
+
+  .filter__list-btn {
+    padding: 0;
+    width: 22px;
+  }
+
+  .filter__item-btn {
+    padding-bottom: 46px;
+  }
+
+  .filter__btn path,
+  .filter__btn rect {
+    fill: @red;
+  }
+
+  .filter__item-btn,
+  .filter__btn,
+  .filter__item-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .filter__item-scale {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 34px;
+  }
+
+  .filter__list-scale {
+    border: none;
+    width: 92%;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter__item-btn,
+  .filter__btn,
+  .filter__item-btn svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .filter {
+    width: 410px;
+  }
+
+  .filter li {
+    //margin-bottom: 13px;
+  }
+
+  .filter__list-btn {
+    width: 45px;
+  }
+
+  .filter__item-btn {
+    padding-bottom: 57px;
+  }
+
+  .filter__list-scale {
+    width: 365px;
+    padding: 0;
+  }
+
+  .filter__item-scale {
+    padding-top: 22px;
+    padding-bottom: 33px;
+  }
+}

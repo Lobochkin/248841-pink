@@ -1,0 +1,66 @@
+.scale {
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+}
+
+.scale__toggle {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: @dark;
+}
+
+.scale__range {
+  position: absolute;
+  display: block;
+  top: -7px;
+  left: 194px;
+  width: 14px;
+  height: 14px;
+  background-color: @grey;
+  border-radius: 100%;
+  border: 2px solid @red;
+  cursor: pointer;
+
+  &:active {
+    background-color: @red;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .scale {
+    padding-left: 30px;
+    padding-right: 18px;
+  }
+
+  .scale__range--crop {
+    left: 146px;
+  }
+
+  .scale__range--fill {
+    left: 25px;
+  }
+
+  .scale__range--contrast {
+    left: 95px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .scale {
+    padding-left: 48px;
+    padding-right: 30px;
+  }
+
+  .scale__range--crop {
+    left: 74px;
+  }
+
+  .scale__range--fill {
+    left: 250px;
+  }
+
+  .scale__range--contrast {
+    left: 160px;
+  }
+}

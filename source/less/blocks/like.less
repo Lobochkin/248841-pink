@@ -1,16 +1,23 @@
 .like {
-  position: relative;
+  display: flex;
 }
 
 .like__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 13px;
-  height: 24px;
-  .icon(icon-heart, 13px, 12px);
+  margin-right: 18px;
+  .icon(icon-heart, 14px, auto);
+  border: 0;
+  background-color: transparent;
 }
 
 .like__number {
   margin-left: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  .like__icon {
+    background-position-y: 5px;
+    order: 1;
+    margin: 0;
+    margin-left: auto;
+  }
 }

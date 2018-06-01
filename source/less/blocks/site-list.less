@@ -14,7 +14,9 @@
   display: block;
   padding: 23px 5px 20px;
   .fonts (18px, 32px, @white, uppercase, 700);
+}
 
+.site-list__link[href] {
   &:hover {
     color: @red;
   }
@@ -33,11 +35,11 @@
     display: flex;
     justify-content: space-between;
     min-width: 620px;
+    padding-top: 25px;
   }
 
   .site-list__item {
     border: none;
-    padding-top: 25px;
   }
 
   .site-list__item--active {
@@ -45,7 +47,7 @@
   }
 
   .site-list__link {
-    padding: 15px;
+    padding: 15px 0;
     .fonts (18px, 18px, @white, none, 400);
 
     &:active {

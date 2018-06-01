@@ -1,6 +1,5 @@
 .photo-users {
   background-color: #ffffff;
-  margin-bottom: 20px;
 }
 
 .photo-users__item {
@@ -8,10 +7,25 @@
   margin-bottom: 20px;
 }
 
+.photo-users__item--photo-day {
+  position: relative;
+}
+
+.photo-users__item--photo-day::before {
+  content: "Панорама дня";
+  position: absolute;
+  width: 140px;
+  right: 20px;
+  top: 0;
+  padding: 5px 0;
+  text-align: center;
+  background-color: @red;
+  .fonts (12px,24px, @white, uppercase, 700);
+}
+
 .photo-users__item--photo-day .photo-users__wrapper {
   margin-left: 20px;
   margin-right: 20px;
-  padding: 0 20px;
 }
 
 .photo-users__item img {
@@ -41,11 +55,10 @@
 }
 
 .photo-users__like {
-  padding-left: 40px;
   .fonts (14px, 24px, @red, uppercase, normal);
 }
 
-@media (min-width: 660px) {
+@media (min-width: @tablet-width) {
   .photo-users .container {
     display: flex;
     flex-wrap: wrap;
@@ -56,13 +69,17 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .photo-users__wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+  }
+
+  .photo-users__item--photo-day::before {
+    top: 60px;
   }
 
   .photo-users__like {
@@ -75,11 +92,23 @@
   }
 
   .photo-users__item--photo-day .photo-users__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background-color: #f2f2f2;
+  }
+
+  .photo-users__item--photo-day .photo-users__like {
+    margin: 0;
+  }
+
+  .photo-users__item--photo-day .photo-users__text {
+    order: 1;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: @desktop-width) {
   .photo-users__item--photo-day {
     width: 960px;
     margin-left: auto;
@@ -89,5 +118,10 @@
   .photo-users__item--photo-day .photo-users__wrapper {
     margin: 0 auto;
     width: 940px;
+  }
+
+  .photo-users__item--photo-day::before {
+    top: 50px;
+    right: 10px;
   }
 }
