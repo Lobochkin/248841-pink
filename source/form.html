@@ -14,7 +14,7 @@
         <div class="page-header__wrapper">
           <div class="container">
             <div class="page-header__logo-btn">
-              <a class="page-header__link">
+              <a class="page-header__link" href="index.html">
                 <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="74.426px" height="22.859px" viewBox="0 0 74.426 22.859" enable-background="new 0 0 74.426 22.859" xml:space="preserve">
                   <g>
                     <path fill="#FFFFFF" d="M0,1.449c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.147v0.064 c0,4.861-4.057,7.373-8.854,7.373H2.544v6.825c0,0.708-0.58,1.288-1.288,1.288C0.58,22.859,0,22.279,0,21.571V1.449z M8.114,12.428 c3.734,0,6.182-1.996,6.182-4.958V7.405c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917H8.114z"/>
@@ -88,7 +88,7 @@
           </div>
           <p class="page-description__text page-description__text--form">
             Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
-            <span class="page-description__text--no-mobile">
+            <span class="page-description__span page-description__span--no-mobile">
               Пожалуйста, заполните форму ниже
             </span>
           </p>
@@ -103,62 +103,92 @@
         <fieldset class="form__fieldset form__fieldset--contact">
           <div class="container">
             <div class="form__inner">
-              <label class="form__family" for="family">
-                Фамилия:
-              </label>
-              <input id="family" name="family" type="text" placeholder="Укажите фамилию *" required>
-              <label class="form__name" for="name">
-                Имя:
-              </label>
-              <input id="name" name="name" type="text" placeholder="Введите ваше имя *" required>
-              <label class="form__patronymic" for="patronymic">
-                Отчество:
-              </label>
-              <input id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+              <div class="form__box">
+                <label class="form__family" for="family">
+                  Фамилия:
+                </label>
+                <input id="family" name="family" type="text" placeholder="Укажите фамилию *" required>
+              </div>
+              <div class="form__box">
+                <label class="form__name" for="name">
+                  Имя:
+                </label>
+                <input id="name" name="name" type="text" placeholder="Введите ваше имя *" required>
+              </div>
+              <div class="form__box">
+                <label class="form__patronymic" for="patronymic">
+                  Отчество:
+                </label>
+                <input id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+              </div>
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--soft">
+        <fieldset class="form__fieldset form__fieldset--progress">
           <div class="container">
             <div class="form__wrapper">
-            <legend class="form__legend">
-              С каким приложением путешествовали?
-            </legend>
-            <div class="form__inner">
-              <label class="form__soft form__soft--ios" for="ios">
-                <input class="visually-hidden" id="ios" name="soft" type="radio" value="ios" checked>
-                <span class="form__point"></span>
-                <div class="form__input--soft"></div>
-                <span class="form__label--text">
-                  Pink для iOS
-                </span>
-              </label>
-              <label class="form__soft form__soft--android" for="android">
-                <input class="visually-hidden" id="android" name="soft" type="radio" value="android">
-                <span class="form__point"></span>
-                <div class="form__input--soft"></div>
-                <span class="form__label--text">
-                  Pink на Android
-                </span>
-              </label>
-              <label class="form__soft form__soft--windows" for="windows">
-                <input class="visually-hidden" id="windows" name="soft" type="radio" value="windows">
-                <span class="form__point"></span>
-                <div class="form__input--soft"></div>
-                <span class="form__label--text">
-                  Windows Phone
-                </span>
-              </label>
+              <p class="form__legend">
+                Ваши безбашенные достижения в путешествии
+              </p>
             </div>
+            <div class="form__inner">
+              <div class="form__column">
+                <label class="form__label" for="self">
+                  <input class="visually-hidden" id="self" name="self" type="checkbox" checked>
+                  <span class="form__input form__input--progress"></span>
+                  <span class="form__text">
+                    Сделал селфи с акулой
+                  </span>
+                </label>
+                <label class="form__label" for="beach">
+                  <input class="visually-hidden" id="beach" name="beach" type="checkbox" checked>
+                  <span class="form__input form__input--progress"></span>
+                  <span class="form__text">
+                    Обгорел на пляже
+                  </span>
+                </label>
+              </div>
+              <div class="form__column">
+                <label class="form__label" for="celebrity">
+                  <input class="visually-hidden" id="celebrity" name="celebrity" type="checkbox">
+                  <span class="form__input form__input--progress"></span>
+                  <span class="form__text">
+                    Видел Чака Норриса
+                  </span>
+                </label>
+                <label class="form__label" for="souvenirs">
+                  <input class="visually-hidden" id="souvenirs" name="souvenirs" type="checkbox">
+                  <span class="form__input form__input--progress"></span>
+                  <span class="form__text">
+                    Накупил сувениров
+                  </span>
+                </label>
+              </div>
+              <div class="form__column">
+                <label class="form__label" for="castle">
+                  <input class="visually-hidden" id="castle" name="castle" type="checkbox" checked>
+                  <span class="form__input form__input--progress"></span>
+                  <span class="form__text">
+                    Удержал башню
+                  </span>
+                </label>
+                <label class="form__label" for="hotel">
+                  <input class="visually-hidden" id="hotel" name="hotel" type="checkbox">
+                  <span class="form__input form__input--progress"></span>
+                  <span class="form__text">
+                    Разгромил отель
+                  </span>
+                </label>
+              </div>
             </div>
           </div>
         </fieldset>
         <fieldset class="form__fieldset form__fieldset--communication">
           <div class="container">
             <div class="form__wrapper">
-              <legend class="form__legend">
+              <p class="form__legend">
                 Контактная информация
-              </legend>
+              </p>
             </div>
             <div class="form__inner">
               <div class="form__block form__block--tell">
@@ -176,60 +206,36 @@
             </div>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--progress">
+        <fieldset class="form__fieldset form__fieldset--soft">
           <div class="container">
             <div class="form__wrapper">
-              <legend class="form__legend">
-                Ваши безбашенные достижения в путешествии
-              </legend>
+              <p class="form__legend">
+                С каким приложением путешествовали?
+              </p>
             </div>
             <div class="form__inner">
-              <label class="form__self" for="self">
-                <input class="visually-hidden" id="self" name="self" type="checkbox" checked>
-                <div class="form__input--progress">
-                </div>
-                <span class="form__label--text">
-                  Сделал селфи с акулой
+              <label class="form__soft form__soft--ios" for="ios">
+                <input class="visually-hidden" id="ios" name="soft" type="radio" value="ios" checked>
+                <span class="form__point"></span>
+                <span class="form__input form__input--soft"></span>
+                <span>
+                  Pink для iOS
                 </span>
               </label>
-              <label class="form__beach" for="beach">
-                <input class="visually-hidden" id="beach" name="beach" type="checkbox" checked>
-                <div class="form__input--progress">
-                </div>
-                <span class="form__label--text">
-                  Обгорел на пляже
+              <label class="form__soft form__soft--android" for="android">
+                <input class="visually-hidden" id="android" name="soft" type="radio" value="android">
+                <span class="form__point"></span>
+                <span class="form__input form__input--soft"></span>
+                <span>
+                  Pink на Android
                 </span>
               </label>
-              <label class="form__celebrity" for="celebrity">
-                <input class="visually-hidden" id="celebrity" name="celebrity" type="checkbox">
-                <div class="form__input--progress">
-                </div>
-                <span class="form__label--text">
-                  Видел Чака Норриса
-                </span>
-              </label>
-              <label class="form__souvenirs" for="souvenirs">
-                <input class="visually-hidden" id="souvenirs" name="souvenirs" type="checkbox">
-                <div class="form__input--progress">
-                </div>
-                <span class="form__label--text">
-                  Накупил сувениров
-                </span>
-              </label>
-              <label class="form__castle" for="castle">
-                <input class="visually-hidden" id="castle" name="castle" type="checkbox" checked>
-                <div class="form__input--progress">
-                </div>
-                <span class="form__label--text">
-                  Удержал башню
-                </span>
-              </label>
-              <label class="form__hotel" for="hotel">
-                <input class="visually-hidden" id="hotel" name="hotel" type="checkbox">
-                <div class="form__input--progress">
-                </div>
-                <span class="form__label--text">
-                  Разгромил отель
+              <label class="form__soft form__soft--windows" for="windows">
+                <input class="visually-hidden" id="windows" name="soft" type="radio" value="windows">
+                <span class="form__point"></span>
+                <span class="form__input form__input--soft"></span>
+                <span>
+                  Windows Phone
                 </span>
               </label>
             </div>
@@ -238,9 +244,9 @@
         <fieldset class="form__fieldset form__fieldset--feedback">
           <div class="container">
             <div class="form__wrapper">
-              <legend class="form__legend">
+              <p class="form__legend">
                 Опишите свои эмоции
-              </legend>
+              </p>
             </div>
             <div class="form__inner">
               <textarea name="comment" id="comment-field" >Можно прям в красках, не стесняясь в выражениях
@@ -248,7 +254,7 @@
             </div>
           </div>
         </fieldset>
-        <div class="container">
+        <div class="form__botton container">
           <div class="form__inner-btn">
             <button class="form__submit" type="submit">
               Отправить форму

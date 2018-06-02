@@ -1,8 +1,12 @@
 .like {
   display: flex;
+  align-items: center;
 }
 
 .like__icon {
+  width: 13px;
+  height: 13px;
+  padding: 0;
   margin-right: 18px;
   .icon(icon-heart, 14px, auto);
   border: 0;
@@ -15,9 +19,12 @@
 
 @media (min-width: @tablet-width) {
   .like__icon {
-    background-position-y: 5px;
     order: 1;
     margin: 0;
     margin-left: auto;
+  }
+
+  .photo-users__item--photo-day .like__icon {
+    margin-left: 16px;
   }
 }

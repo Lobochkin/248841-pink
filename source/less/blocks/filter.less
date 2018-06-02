@@ -1,18 +1,25 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .filter__list-btn {
+  width: 62.5%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0 17.18%;
-  padding-top: 26px;
+  margin-top: 26px;
+  margin-bottom: 25px;
+  padding: 0;
 }
 
 .filter__item-btn {
   width: 45px;
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
   cursor: pointer;
 }
 
@@ -40,6 +47,7 @@
 }
 
 .filter__list-scale {
+  width: 75%;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -58,13 +66,15 @@
 
 @media (min-width: @tablet-width) {
   .filter {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 10px;
   }
 
   .filter ul {
     flex-direction: column;
     justify-content: flex-start;
+    margin-bottom: 20px;
   }
 
   .filter li {
@@ -74,11 +84,20 @@
 
   .filter__list-btn {
     padding: 0;
+    margin: 0;
     width: 22px;
   }
 
   .filter__item-btn {
-    padding-bottom: 46px;
+    width: 22px;
+    padding-bottom: 24px;
+  }
+
+  .filter__item-btn,
+  .filter__item-scale {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .filter__btn path,
@@ -86,7 +105,6 @@
     fill: @red;
   }
 
-  .filter__item-btn,
   .filter__btn,
   .filter__item-btn svg {
     width: 22px;
@@ -107,7 +125,12 @@
 }
 
 @media (min-width: @desktop-width) {
-  .filter__item-btn,
+  .filter__item-btn {
+    width: 45px;
+    padding-bottom: 12px;
+  }
+
+
   .filter__btn,
   .filter__item-btn svg {
     width: 45px;
@@ -118,21 +141,17 @@
     width: 410px;
   }
 
-  .filter li {
-    //margin-bottom: 13px;
-  }
-
   .filter__list-btn {
     width: 45px;
-  }
-
-  .filter__item-btn {
-    padding-bottom: 57px;
   }
 
   .filter__list-scale {
     width: 365px;
     padding: 0;
+  }
+
+  .filter li {
+    margin-bottom: 12px;
   }
 
   .filter__item-scale {

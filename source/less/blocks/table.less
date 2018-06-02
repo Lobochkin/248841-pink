@@ -34,6 +34,24 @@
   display: block;
 }
 
+.table__hit {
+  position: relative;
+  overflow: hidden;
+}
+
+.table__hit::before {
+  content: "Хит";
+  position: absolute;
+  left: -109px;
+  top: 13px;
+  width: 100%;
+  background-color: #d22856;
+  padding: 0;
+  .fonts (14px, 30px, @white, uppercase, 400);
+  font-weight: 400;
+  transform: rotate(-45deg);
+}
+
 .true {
   display: block;
   width: 34px;
@@ -48,7 +66,7 @@
   .icon(icon-menu-cross, 28px, 28px);
 }
 
-@media (min-width: 660px) {
+@media (min-width: @tablet-width) {
   .table {
     margin-left: 0;
     width: 100%;
@@ -74,6 +92,11 @@
     font-size: 16px;
   }
 
+  .table__hit::before {
+    left: -58px;
+    top: 5px;
+  }
+
   .table__inner {
     justify-content: center;
   }
@@ -84,5 +107,20 @@
 
   .table__text {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table th {
+    height: 98px;
+  }
+
+  .table td {
+    height: 60px;
+  }
+
+  .table__hit::before {
+    left: -80px;
+    top: 5px;
   }
 }
