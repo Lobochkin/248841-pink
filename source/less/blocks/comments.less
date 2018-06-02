@@ -58,14 +58,46 @@
 }
 
 @media (min-width: 960px) {
-  .comments,
+  .comments {
+    padding-top: 70px;
+  }
+
+  .comments__inner {
+    padding-top: 70px;
+    position: relative;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 80px 65px;
+  }
+
+  .comments__inner::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    top: 140px;
+    left: 10px;
+    .icon(icon-review-arrow-left, 22px, 42px);
+  }
+
+  .comments__inner::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 42px;
+    top: 140px;
+    right: 10px;
+    .icon(icon-review-arrow-right, 22px, 42px);
+  }
+
   .comments__list {
-    padding: 0;
     margin: 0;
+    padding: 110px 125px 50px;
   }
 
   .comments__item {
-    padding: 185px 125px 50px;
+    padding: 0;
   }
 
   .comments__title {

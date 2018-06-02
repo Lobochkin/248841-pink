@@ -1,17 +1,32 @@
-.researches__wapper {
+.researches__wrapper {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
-  .researches__wapper {
+  .researches__wrapper {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-top: 60px;
     margin-bottom: 100px;
-    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-image: url("../img/icon-timer.svg");
     background-repeat: no-repeat;
-    background-position: 3.8% 60px;
-    background-size: 240px 277px;
+    background-position: 20px 60px;
+    background-size: 240px auto;
+  }
+
+  .researches__wrapper::before {
+    content: "24";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 57px;
+    left: 16px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid @red;
+    border-radius: 100%;
+    .fonts (96px, 96px, @red, none, 700);
   }
 
   .researches__inner {
@@ -38,13 +53,31 @@
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: @desktop-width) {
   .researches {
     background-color: #f2f2f2;
   }
 
+  .researches__wrapper {
+    background-position: 10px 60px;
+    background-size: 300px auto;
+    padding-bottom: 90px;
+    margin-bottom: 0;
+  }
+
+  .researches__wrapper::before {
+    top: 70px;
+    left: 23px;
+    width: 255px;
+    height: 255px;
+    border-width: 18px;
+    font-size: 120px;
+    line-height: 120px;
+  }
+
   .researches__inner {
     width: 570px;
+    padding-top: 90px;
   }
 
   .researches__description,
