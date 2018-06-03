@@ -7,6 +7,10 @@
       HTML Academy: Пинк
     </title>
     <link href="css/style.css" rel="stylesheet">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header page-header--img">
@@ -128,7 +132,11 @@
         </h2>
         <article class="photo-users__item photo-users__item--photo-day">
           <a href="#">
-            <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Фотография пользователя">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография пользователя">
+            </picture>
           </a>
           <div class="photo-users__wrapper">
             <h2 class="photo-users__title">
@@ -145,7 +153,11 @@
         <div class="container">
           <article class="photo-users__item">
             <a href="#">
-              <img src="img/photo-car-mobile@1x.jpg" width="320" height="180" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
             </a>
             <div class="photo-users__wrapper">
               <h2 class="photo-users__title">
@@ -161,7 +173,11 @@
           </article>
           <article class="photo-users__item">
             <a href="#">
-              <img src="img/photo-drumset-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
             </a>
             <div class="photo-users__wrapper">
               <h2 class="photo-users__title">
@@ -177,7 +193,11 @@
           </article>
           <article class="photo-users__item">
             <a href="#">
-              <img src="img/photo-window-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
             </a>
             <div class="photo-users__wrapper">
               <h2 class="photo-users__title">
@@ -193,7 +213,11 @@
           </article>
           <article class="photo-users__item">
             <a href="#">
-              <img src="img/photo-fair-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
             </a>
             <div class="photo-users__wrapper">
               <h2 class="photo-users__title">
@@ -209,7 +233,11 @@
           </article>
           <article class="photo-users__item">
             <a href="#">
-              <img src="img/photo-pov-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
             </a>
             <div class="photo-users__wrapper">
               <h2 class="photo-users__title">
@@ -225,7 +253,11 @@
           </article>
           <article class="photo-users__item">
             <a href="#">
-              <img src="img/photo-wing-mobile@1x.jpg" width="280" height="180" alt="Фотография пользователя">
+              <picture>
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
             </a>
             <div class="photo-users__wrapper">
               <h2 class="photo-users__title">
@@ -249,7 +281,11 @@
       </div>
       <section class="gallery">
         <div class="gallery__inner container">
-          <img class="gallery__img" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Фотография пользователя">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+            <img class="gallery__img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Фотография пользователя">
+          </picture>
           <form class="gallery__filter filter" method="post" enctype="multipart/form-data" action="https://echo.htmlacademy.ru" autocomplete="on">
             <ul class="filter__list-btn">
               <li class="filter__item-btn">

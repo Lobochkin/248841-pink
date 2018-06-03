@@ -224,6 +224,7 @@ input:checked ~ .form__point {
 
   .form__block {
     flex-direction: column-reverse;
+    position: relative;
   }
 
   .form__inner-btn {
@@ -237,6 +238,23 @@ input:checked ~ .form__point {
 
   .form__required {
     padding-top: 22px;
+  }
+
+  .form__icon {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 2px;
+    right: 0;
+    background-color: #e5e5e5;
+  }
+
+  .form__icon--tell {
+    .icon(icon-phone, 20px,19px);
+  }
+
+  .form__icon--mail {
+    .icon(icon-mail, 18px,13px);
   }
 }
 
