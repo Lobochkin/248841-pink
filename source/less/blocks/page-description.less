@@ -1,5 +1,5 @@
 .page-description {
-  padding: 40px 0 0;
+  padding: 31px 0 0;
 }
 
 .page-description__inner {
@@ -7,21 +7,25 @@
 }
 
 .page-description__title {
-  .fonts (24px, 27px, @white, none, 300);
-  margin: 0 0 85px;
+  .fonts (24px, 28px, @white, none, 300);
+  margin: 0 0 83px;
   text-align: center;
+}
+
+.page-description__title--form {
+  margin: 0 0 55px;
 }
 
 .page-description__text {
   margin: 0;
   text-align: center;
-  padding: 50px 11%;
+  padding: 45px 11% 49px;
   background-color: #ffffff;
   .fonts (14px, 30px, @dark, none, 400);
 }
 
 .page-description__text--form {
-  padding: 50px 7% 0;
+  padding: 45px 7% 0;
 }
 
 .page-description__span--no-mobile {
@@ -29,15 +33,30 @@
 }
 
 @media (min-width: @tablet-width) {
+  .page-description {
+    padding-top: 68px;
+  }
+
   .page-description__title {
     font-size: 50px;
     line-height: 60px;
+    margin: 0 0 140px;
+  }
+
+  .page-description__title--form {
+    margin-bottom: 80px;
   }
 
   .page-description__text {
     padding-left: 8%;
     padding-right: 8%;
     font-size: 18px;
+    padding-top: 93px;
+    padding-bottom: 75px;
+  }
+
+  .page-description__text--form {
+    padding-bottom: 1px;
   }
 
   .page-description__span--no-mobile {
@@ -47,16 +66,19 @@
 
 @media (min-width: @desktop-width) {
   .page-description__text {
-    padding-left: 18%;
-    padding-right: 18%;
+    padding: 91px 307px 89px;
   }
 
   .page-description__text--form {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 91px 200px 20px;
   }
 
   .page-description {
     width: 100%;
+    padding-top: 62px;
+  }
+
+  .page-description__title {
+    margin-bottom: 102px;
   }
 }

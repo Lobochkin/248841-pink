@@ -12,7 +12,7 @@
 
 .site-list__link {
   display: block;
-  padding: 23px 5px 20px;
+  padding: 15px 5px 15px;
   .fonts (18px, 32px, @white, uppercase, 700);
 }
 
@@ -30,16 +30,18 @@
   box-shadow: 0 -1px 0 0 #000000;
 }
 
-@media (min-width: 960px) {
+@media (min-width: @desktop-width) {
   .site-list {
     display: flex;
     justify-content: space-between;
     min-width: 620px;
-    padding-top: 25px;
+    padding-top: 30px;
   }
 
   .site-list__item {
+    padding-bottom: 32px;
     border: none;
+    margin-bottom: -2px;
   }
 
   .site-list__item--active {

@@ -6,11 +6,21 @@
 
 .social-list__item {
   display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 100%;
   border: 3px solid #e9ebec;
-  width: 45px;
-  height: 45px;
+  width: 51px;
+  height: 51px;
   margin-right: 12px;
+
+  &:hover {
+    border-color: @dark;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .social-list__item:last-of-type {
@@ -24,4 +34,17 @@
   fill: @red;
   width: 39px;
   height: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social-list {
+    padding-right: 0;
+    padding-left: 5px;
+  }
 }

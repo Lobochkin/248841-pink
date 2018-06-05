@@ -14,6 +14,12 @@
   position: relative;
 }
 
+.photo-users__item--photo-day picture {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .photo-users__item--photo-day::before {
   content: "Панорама дня";
   position: absolute;
@@ -36,30 +42,30 @@
 }
 
 .photo-users__wrapper {
-  padding: 24px 15px 26px;
+  padding: 18px 17px 21px;
   background-color: #f2f2f2;
 }
 
 
 .photo-users__title {
-  margin-top: 0;
-  margin-bottom: 10px;
+  display: flex;
+  margin: 0;
   .fonts (14px, 24px, #283645, none, bold);
 }
 
 .photo-users__time {
-  margin-left: 5px;
+  margin-left: 3px;
   .fonts (12px, 24px, #283645, uppercase, lighter);
 }
 
 .photo-users__text {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 9px;
   .fonts (14px, 24px, #283645, none, normal);
 }
 
 .photo-users__like {
-  .fonts (14px, 24px, @red, uppercase, normal);
+  .fonts (12px, 24px, @red, uppercase, normal);
 }
 
 @media (min-width: @tablet-width) {
@@ -73,17 +79,24 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .photo-users__wrapper {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding: 24px 32px 24px 27px;
+    min-height: 155px;
+  }
+
+  .photo-users__text {
+    margin-bottom: 11px;
   }
 
   .photo-users__item--photo-day::before {
-    top: 60px;
+    top: 58px;
+    padding: 5px 0 7px;
   }
 
   .photo-users__like {
@@ -93,6 +106,12 @@
   .photo-users__item--photo-day {
     width: 100%;
     background-color: #ffffff;
+    margin-bottom: 50px;
+  }
+
+  .photo-users__item--photo-day img {
+    width: auto;
+    max-width: none;
   }
 
   .photo-users__item--photo-day .photo-users__wrapper {
@@ -101,6 +120,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #f2f2f2;
+    padding: 24px 29px 14px 27px;
+    min-height: 0;
   }
 
   .photo-users__item--photo-day .photo-users__like {
@@ -113,19 +134,28 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo-users__item {
+    margin-bottom: 53px;
+  }
+
+  .photo-users__wrapper {
+    min-height: 157px;
+  }
+
   .photo-users__item--photo-day {
-    width: 960px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 48px;
   }
 
   .photo-users__item--photo-day .photo-users__wrapper {
-    margin: 0 auto;
     width: 940px;
+    margin: 0 auto;
+    padding-right: 31px;
   }
 
   .photo-users__item--photo-day::before {
-    top: 50px;
-    right: 10px;
+    top: 54px;
+    right: 10.9%;
   }
 }

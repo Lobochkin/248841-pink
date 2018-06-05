@@ -15,6 +15,7 @@
 .icon-list__item {
   &--apple {
     .icon(logo-apple);
+    background-position: 0% 0%;
   }
 
   &--android {
@@ -23,5 +24,11 @@
 
   &--windows {
     .icon(logo-microsoft);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .icon-list {
+    padding: 0 47px;
   }
 }

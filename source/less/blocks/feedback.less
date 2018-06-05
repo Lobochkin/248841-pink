@@ -1,24 +1,24 @@
 .feedback {
   position: relative;
   background-color: @white;
-  padding-top: 44px;
-  padding-bottom: 35px;
+  padding-top: 41px;
+  padding-bottom: 38px;
 }
 
 .feedback__slogan {
-  margin: 0 0 40px;
+  margin: 0 0 30px;
   text-align: center;
   .fonts (24px, 30px, @dark, none, 300);
 }
 
 .feedback__contact:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .feedback__title {
   text-align: center;
-  margin: 0 0 10px;
-  .fonts (18px, 20px, @dark, none, 700);
+  margin: 0;
+  .fonts (18px, 26px, @dark, none, 700);
 }
 
 .feedback__text {
@@ -31,20 +31,32 @@
   text-align: center;
   margin: 0;
   .fonts (24px, 30px, @red, none, 300);
+
+  &:hover {
+    color: @dark;
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
 }
 
 .feedback::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -33px;
+  bottom: -34px;
   .icon(bg-triangle-white-footer, 100%, 34px);
   background-size: 100% 100%;
+  z-index: 1;
 }
 
-@media (min-width: 660px) {
+@media (min-width: @tablet-width) {
   .feedback {
-    padding-bottom: 30px;
+    padding-top: 46px;
+    padding-bottom: 25px;
   }
 
   .feedback-inner {
@@ -54,40 +66,73 @@
   }
 
   .feedback__slogan {
-    margin: 0 0 50px;
+    margin: 0 0 41px;
     width: 100%;
     font-size: 40px;
-    line-height: 50px;
+    line-height: 49px;
+  }
+
+  .feedback__block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .feedback__contact:first-of-type {
+    margin-right: 72px;
   }
 
   .feedback__contact:not(:last-of-type) {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .feedback__contact {
-    width: 50%;
+    width: 40%;
+  }
+
+  .feedback__title {
+    margin-bottom: 4px;
   }
 
   .feedback::after {
     bottom: -68px;
-    min-height: 70px;
+    min-height: 68px;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: @desktop-width) {
+  .feedback {
+    padding-top: 65px;
+    padding-bottom: 3px;
+  }
+
   .feedback__contact {
     margin-bottom: 0;
-    width: 33.333%;
+    width: 30%;
+  }
+
+  .feedback__block {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
   }
 
   .feedback__contact:nth-of-type(2) {
     order: 1;
   }
 
+  .feedback__contact:first-of-type {
+    margin-right: 0;
+  }
+
   .feedback__slogan {
-    margin: 0 0 70px;
+    margin: 0 0 55px;
     font-size: 50px;
     line-height: 60px;
+  }
+
+  .feedback__title {
+    margin-bottom: 23px;
   }
 
   .feedback::after {
