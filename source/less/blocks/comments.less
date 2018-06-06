@@ -1,11 +1,38 @@
 .comments {
   background-color: @white;
-  padding: 40px 0;
+  padding: 42px 0;
+}
+
+.comments__btn {
+  display: none;
+  padding: 0;
+  border: 0;
+  width: 22px;
+  height: 42px;
+  opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.1;
+    outline: none;
+  }
+}
+
+.comments__btn--right {
+  .icon(icon-review-arrow-right, 22px, 61px);
+}
+
+.comments__btn--left {
+  .icon(icon-review-arrow-left, 22px, 61px);
 }
 
 .comments__list {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   padding: 0;
   list-style-type: none;
 }
@@ -21,7 +48,7 @@
 .comments__title {
   .fonts (18px, 30px, #000000, none, 700);
   text-align: center;
-  margin: 0 0 28px;
+  margin: 0 0 13px;
 }
 
 .comments__description {
@@ -35,7 +62,11 @@
   margin: 0;
 }
 
-@media (min-width: 660px) {
+@media (min-width: @tablet-width) {
+  .comments {
+    padding-bottom: 23px;
+  }
+
   .comments__item--active {
     display: flex;
     flex-direction: column;
@@ -44,12 +75,13 @@
   .comments__text {
     font-size: 18px;
     order: -1;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
   }
 
   .comments__title {
     font-size: 20px;
-    margin-bottom: 17px;
+    line-height: 32px;
+    margin-bottom: 0;
   }
 
   .comments__description {
@@ -57,19 +89,43 @@
   }
 }
 
-@media (min-width: 960px) {
-  .comments,
+@media (min-width: @desktop-width) {
+  .comments {
+    padding-top: 72px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .comments__inner {
+    display: flex;
+    align-items: center;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 78px auto;
+  }
+
+  .comments__btn {
+    display: block;
+    background-position: top;
+    background-color: transparent;
+  }
+
   .comments__list {
-    padding: 0;
     margin: 0;
+    padding: 113px 103px 40px;
   }
 
   .comments__item {
-    padding: 185px 125px 50px;
+    padding: 0;
   }
 
   .comments__title {
     font-size: 24px;
+  }
+
+  .comments__text {
+    margin-bottom: 37px;
   }
 
   .comments__description {

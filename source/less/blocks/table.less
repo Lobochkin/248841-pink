@@ -1,28 +1,29 @@
 .table {
   border-spacing: 2px;
   border-color: #e5e5e5;
-  margin-left: -565px;
+  margin-left: -556px;
   margin-bottom: 40px;
 }
 
 .table td {
-  padding-left: 25px;
-  padding-right: 20px;
-  min-width: 280px;
-  height: 60px;
+  padding-left: 21px;
+  padding-right: 17px;
+  min-width: 276px;
+  height: 58px;
   .fonts (14px, 30px, @dark, uppercase, 400);
   background-color: @white;
 }
 
 .table th:not(:first-of-type) {
-  height: 100px;
-  min-width: 280px;
+  height: 98px;
+  min-width: 276px;
   background-color: @dark;
   .fonts (18px, 30px, @white, uppercase, 700);
+  padding: 16px 0 18px;
 }
 
 .table__price {
-  .fonts (24px, 30px, @white, uppercase, 300);
+  .fonts (24px, 34px, @white, uppercase, 300);
 }
 
 .table__inner {
@@ -34,44 +35,78 @@
   display: block;
 }
 
-.true {
-  display: block;
-  width: 34px;
-  height: 20px;
-  .icon(icon-yes, 34px, 20px);
+.table__hit {
+  position: relative;
+  overflow: hidden;
 }
 
-.false {
+.table__hit::before {
+  content: "Хит";
+  position: absolute;
+  left: -116px;
+  top: 12px;
+  width: 100%;
+  background-color: #d22856;
+  padding: 0;
+  .fonts (14px, 30px, @white, uppercase, 400);
+  font-weight: 400;
+  transform: rotate(-45deg);
+}
+
+.table__true {
+  display: block;
+  width: 30px;
+  height: 22px;
+}
+
+.table__true svg {
+  fill: #3dc644;
+}
+
+.table__false {
   display: inline-block;
   width: 28px;
   height: 28px;
-  .icon(icon-menu-cross, 28px, 28px);
+  .icon(icon-no, 28px, 28px);
 }
 
-@media (min-width: 660px) {
+@media (min-width: @tablet-width) {
   .table {
     margin-left: 0;
     width: 100%;
+    margin-bottom: 21px;
   }
 
   .table td {
-    padding-left: 16px;
-    padding-right: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
     text-align: left;
     text-transform: none;
     min-width: 0;
     width: 25%;
-    height: 45px;
+    height: 44px;
+  }
+
+  .table__true {
+    width: 28px;
+    height: 25px;
   }
 
   .table th:not(:first-of-type) {
-    height: 80px;
+    height: 78px;
     min-width: 0;
     font-size: 16px;
+    line-height: 22px;
+    padding: 11px 0 4px;
   }
 
   .table__price {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .table__hit::before {
+    left: -56px;
+    top: 3px;
   }
 
   .table__inner {
@@ -84,5 +119,31 @@
 
   .table__text {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table th:not(:first-of-type) {
+    height: 98px;
+    font-size: 18px;
+    padding: 3px 0 0;
+  }
+
+  .table td {
+    font-size: 18px;
+    height: 59px;
+    padding-left: 20px;
+    padding-right: 21px;
+  }
+
+  .table__hit::before {
+    left: -93px;
+    top: 11px;
+  }
+
+  .table__price {
+    display: block;
+    font-size: 24px;
+    margin-top: 4px;
   }
 }
