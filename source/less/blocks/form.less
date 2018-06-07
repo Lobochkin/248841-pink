@@ -6,7 +6,7 @@
 
 .form__fieldset {
   padding: 0;
-  padding-top: 35px;
+  padding-top: 34px;
   border: none;
   margin: 0;
   margin-bottom: 24px;
@@ -103,12 +103,15 @@ textarea {
 }
 
 .form__fieldset--feedback .form__legend {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
+  margin-top: 8px;
+  line-height: 30px;
 }
 
 .form__fieldset--feedback textarea {
   min-height: 200px;
   padding-left: 18px;
+  resize: none;
 }
 
 .form__fieldset--progress {
@@ -156,14 +159,6 @@ textarea {
   border: 2px solid #e5e5e5;
   background-color: @white;
   margin-right: 30px;
-
-  //&:hover {
-  //  border-color: @dark;
-  //}
-
-  //&:active {
-  //  border-color: @red;
-  //}
 }
 
 .form__label,
@@ -226,6 +221,11 @@ input:checked ~ .form__point {
     padding-bottom: 0;
   }
 
+  .form__fieldset--soft .form__legend {
+    margin-bottom: 1px;
+    top: 17px;
+  }
+
   .form__fieldset--communication {
     margin-bottom: 0;
     order: 2;
@@ -253,11 +253,12 @@ input:checked ~ .form__point {
     border: none;
     padding: 0;
     margin-top: 70px;
+    margin-bottom: 36px;
   }
 
   .form__inner {
     border: 2px solid #e5e5e5;
-    margin: 0 0 48px;
+    margin: 0 0 36px;
     padding: 52px 58px 54px 58px;
   }
 
@@ -267,7 +268,8 @@ input:checked ~ .form__point {
 
   .form__legend {
     position: relative;
-    top: 10px;
+    line-height: 30px;
+    top: 15px;
     margin: 0 auto;
     padding: 0 26px 0;
     background-color: @white;
@@ -316,18 +318,21 @@ input:checked ~ .form__point {
     flex-direction: column-reverse;
     position: relative;
     margin-bottom: 25px;
+    min-height: 64px;
+  }
+
+  .form__block input {
+    min-height: 64px;
+    margin-bottom: 10px;
   }
 
   .form__block:last-of-type {
     margin-bottom: 0;
   }
 
-  .form__block input {
-    margin-bottom: 10px;
-  }
-
   .form__fieldset--feedback .form__legend {
     margin-bottom: 0;
+    margin-top: 0;
     padding: 0 38px;
   }
 
@@ -339,7 +344,7 @@ input:checked ~ .form__point {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 19px;
+    margin-top: 31px;
     margin-bottom: 35px;
   }
 
@@ -357,12 +362,16 @@ input:checked ~ .form__point {
     background-color: #e5e5e5;
   }
 
-  .form__icon--tell {
-    .icon(icon-phone, 20px,19px);
+  .form__icon--tel {
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .form__icon--mail {
-    .icon(icon-mail, 18px,13px);
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -370,7 +379,7 @@ input:checked ~ .form__point {
   .form {
     width: 960px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 29px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -390,7 +399,7 @@ input:checked ~ .form__point {
 
   .form__fieldset--contact {
     width: 454px;
-    margin-top: 25px;
+    margin-top: 35px;
   }
 
   .form__fieldset--contact .form__inner {
@@ -460,6 +469,7 @@ input:checked ~ .form__point {
 
   .form__inner-btn {
     margin-bottom: 0;
+    margin-top: 19px;
   }
 
   .form__submit {
@@ -472,7 +482,7 @@ input:checked ~ .form__point {
   }
 
   .form__required {
-    line-height: 32px;
+    line-height: 30px;
   }
 
   .form__only-desktop {
