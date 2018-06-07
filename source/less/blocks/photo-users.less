@@ -16,21 +16,36 @@
 
 .photo-users__item--photo-day picture {
   display: flex;
+  position: relative;
   justify-content: center;
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &::before {
+    content: "Панорама дня";
+    position: absolute;
+    width: 140px;
+    right: 20px;
+    top: 0;
+    padding: 5px 0;
+    text-align: center;
+    background-color: @red;
+    .fonts (12px,24px, @white, uppercase, 700);
+  }
 }
 
-.photo-users__item--photo-day::before {
-  content: "Панорама дня";
-  position: absolute;
-  width: 140px;
-  right: 20px;
-  top: 0;
-  padding: 5px 0;
-  text-align: center;
-  background-color: @red;
-  .fonts (12px,24px, @white, uppercase, 700);
-}
+//.photo-users__item--photo-day::before {
+//  content: "Панорама дня";
+//  position: absolute;
+//  width: 140px;
+//  right: 20px;
+//  top: 0;
+//  padding: 5px 0;
+//  text-align: center;
+//  background-color: @red;
+//  .fonts (12px,24px, @white, uppercase, 700);
+//}
 
 .photo-users__item--photo-day .photo-users__wrapper {
   margin-left: 20px;
@@ -94,7 +109,7 @@
     margin-bottom: 11px;
   }
 
-  .photo-users__item--photo-day::before {
+  .photo-users__item--photo-day picture::before {
     top: 58px;
     padding: 5px 0 7px;
   }
@@ -154,7 +169,7 @@
     padding-right: 31px;
   }
 
-  .photo-users__item--photo-day::before {
+  .photo-users__item--photo-day picture::before {
     top: 54px;
     right: 1%;
   }

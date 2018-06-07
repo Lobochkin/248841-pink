@@ -157,11 +157,22 @@ textarea {
   background-color: @white;
   margin-right: 30px;
 
-  &:hover {
+  //&:hover {
+  //  border-color: @dark;
+  //}
+
+  //&:active {
+  //  border-color: @red;
+  //}
+}
+
+.form__label,
+.form__soft {
+  &:hover .form__input {
     border-color: @dark;
   }
 
-  &:active {
+  &:active .form__input {
     border-color: @red;
   }
 }
@@ -171,7 +182,7 @@ textarea {
 }
 
 input:checked ~ .form__input--progress {
-  .icon(icon-yes, 22px, 16px);
+  .icon(yes, 22px, 16px);
 }
 
 input:checked ~ .form__point {

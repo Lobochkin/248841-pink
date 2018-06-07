@@ -45,6 +45,7 @@
   border: 0;
   width: 53px;
   height: 53px;
+  cursor: pointer;
 }
 
 .filter__btn svg {
@@ -59,7 +60,7 @@
   }
 }
 
-.filter__btn--active svg {
+.filter__btn--size svg {
   fill: @red;
 
   &:hover {
@@ -124,6 +125,18 @@
   .filter__item-scale {
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+
+  .filter__btn svg {
+    fill: @red;
+
+    &:hover {
+      fill: @red;
+    }
+
+    &:active {
+      fill: @red;
     }
   }
 

@@ -39,7 +39,9 @@
 
 .page-header__logo {
   fill: @white;
+}
 
+.page-header__link[href] .page-header__logo {
   &:hover {
     fill: @red;
   }
@@ -53,6 +55,10 @@
   display: block;
   width: 75px;
   height: 24px;
+}
+
+.page-header__toggler.page-header__toggler--no-js {
+  display: none;
 }
 
 .page-header__toggler {
