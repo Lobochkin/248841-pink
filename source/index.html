@@ -327,7 +327,6 @@
         </div>
       </section>
       <div class="map" id="map-canvas"></div>
-      </div>
     </main>
     <footer class="page-footer page-footer--main">
       <div class="page-footer__inner container">
@@ -362,23 +361,9 @@
         </div>
       </div>
     </footer>
-    <script>
-      function initMap() {
-        var uluru = {lat: 59.9360182, lng: 30.3209053};
-        var map = new google.maps.Map(document.getElementById("map-canvas"), {
-          zoom: 15,
-          center: uluru
-        });
-        var image = "img/icon-map-marker.svg";
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-          icon: image
-        });
-      }
-    </script>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo7nbRM7ulYyRw6GbXPK4zpimYbddrBO0&callback=initMap">
     </script>
+    <script src="js/map.js"></script>
   </body>
 </html>

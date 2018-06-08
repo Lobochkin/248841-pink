@@ -82,16 +82,18 @@ textarea {
 .form__box {
   display: flex;
   flex-direction: column;
+}
 
-  &:hover input {
-    border-color: @dark;
-    outline: none;
-  }
+.form__block input:hover,
+.form__box input:hover {
+  border-color: @dark;
+  outline: none;
+}
 
-  &:active input {
-    border-color: @red;
-    outline: none;
-  }
+.form__block input:focus,
+.form__box input:focus {
+  border-color: @red;
+  outline: none;
 }
 
 .form__fieldset--feedback {
@@ -180,14 +182,11 @@ input:checked ~ .form__input--progress {
   .icon(yes, 22px, 16px);
 }
 
-input:checked ~ .form__point {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 15px;
-  height: 15px;
+input:checked ~ .form__input--soft {
   background-color: @red;
-  border-radius: 100%;
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .form__legend {
