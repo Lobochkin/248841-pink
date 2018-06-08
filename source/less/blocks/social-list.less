@@ -8,6 +8,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: @red;
   border-radius: 100%;
   border: 3px solid #e9ebec;
   width: 51px;
@@ -23,17 +30,8 @@
   }
 }
 
-.social-list__item:last-of-type {
+.social-list__item:last-of-type .social-list__link {
   margin-right: 0;
-}
-
-.social-list__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: @red;
-  width: 39px;
-  height: 39px;
 }
 
 @media (min-width: @tablet-width) {
